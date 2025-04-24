@@ -86,12 +86,9 @@ int main(int argc, char * argv[]){
         apply_rule(bit, rule);
     }
 
-    char * hash = charfy(bit);
+    unsigned long hash = strtol(bit, NULL, 2);
 
-    for(int i = 0; i < strlen(hash); i++){
-        printf("%02X", (unsigned char) hash[i]);
-    }
-    printf("\n");
+    printf("%ld", hash); 
 
     free(bit);
 
