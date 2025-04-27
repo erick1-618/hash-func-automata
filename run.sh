@@ -4,12 +4,12 @@ ARCHIVE="automata"
 
 echo Compiling...
 
-gcc $ARCHIVE.c -o $ARCHIVE
+gcc "./src/$ARCHIVE.c" -o "./bin/$ARCHIVE"
 
 if [ $? -eq 0 ]; then
 
     echo Executing...
-    ./$ARCHIVE $1
+    ./bin/$ARCHIVE $1
 else
     echo Error compiling
 fi
